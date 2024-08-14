@@ -15,7 +15,7 @@ import OpenAI from "openai"
 import { createErrorResponse } from "@/lib/response"
 import { guessFileExtensionByContentType } from "@/lib/content-type"
 
-const maxDuration = 300
+const maxDuration = 59
 export async function POST(req: Request) {
   try {
     const supabaseAdmin = createClient<Database>(
