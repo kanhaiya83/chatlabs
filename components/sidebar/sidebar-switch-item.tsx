@@ -25,11 +25,14 @@ export const SidebarSwitchItem: FC<SidebarSwitchItemProps> = ({
       }
       trigger={
         <TabsTrigger
-          className="hover:opacity-50"
+          className="w-full px-6 hover:opacity-50"
           value={contentType}
           onClick={() => onContentTypeChange(contentType as ContentType)}
         >
-          {icon}
+          <div className="flex w-full justify-start gap-2">
+            {icon}
+            <span className="text-center text-lg">{resolvedName}</span>
+          </div>
         </TabsTrigger>
       }
     />

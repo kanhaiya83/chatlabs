@@ -95,14 +95,17 @@ export const SidebarSwitcher: FC<SidebarSwitcherProps> = ({
           asChild
           trigger={
             <Button
-              className="mx-auto hover:opacity-50"
+              className="mx-auto w-full px-6 py-1.5 hover:opacity-50"
               variant="ghost"
               size="icon"
               onClick={e => {
                 window.open(`/splitview`, "_blank")
               }}
             >
-              <IconLayoutColumns size={SIDEBAR_ICON_SIZE} stroke={1.5} />
+              <div className="flex justify-start gap-2 ">
+                <IconLayoutColumns size={SIDEBAR_ICON_SIZE} stroke={1.5} />
+                <span className="text-center text-lg">{"Split Screen"}</span>
+              </div>
             </Button>
           }
         />
